@@ -20,7 +20,7 @@ Automated processing vacancies programm
    query                  = QA automation
    # Exact resume title isn't necessary for this value. Target resume title should contain it as substring.
    resume.title           = QA auto
-   cover.letter.file.name = coverLetter.txt
+   cover.letter.file.name = ./userResources/coverLetter.txt
    ```
 5. Make sure you **saved** changes in the files.
 6. Double click to `.jar` file.
