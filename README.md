@@ -20,16 +20,22 @@ Automated processing vacancies programm
    query                  = QA automation
    # Exact resume title isn't necessary for this value. Target resume title should contain it as substring.
    resume.title           = QA auto
-   cover.letter.file.name = ./userResources/coverLetter.txt
+   cover.letter = ./userResources/coverLetter.txt
    ```
 5. Make sure you **saved** changes in the files.
 6. Double click to `.jar` file.
 ## Notes
 #### Another way to run program
-You also can run programm via command line:
+You also can run program via command line:
 1. Open explorer and go to `.jar` containing folder.
 2. Click to folder path field then print `cmd` and press `enter`.
 3. Run command `java -jar program-name.jar`
+
+If you met command line cyrillic encoding issue do following steps:
+1. Start -> Run -> regedit
+2. Go to [HKEY_LOCAL_MACHINE \ Software \ Microsoft \ Command Processor\Autorun]
+3. Change the value to `@chcp 65001>nul`
+If `Autorun` isn't present, you can add a `New String`.
 #### First run
 - If you use double click first run should be made with property `vacancy.count = 1`.
 When program stop make log in, accept cookies, set location,
