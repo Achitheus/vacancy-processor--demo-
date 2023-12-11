@@ -20,7 +20,9 @@ Automated processing vacancies programm
    query                  = QA automation
    # Exact resume title isn't necessary for this value. Target resume title should contain it as substring.
    resume.title           = QA auto
-   cover.letter = ./userResources/coverLetter.txt
+   cover.letter           = ./userResources/coverLetter.txt
+   # switch this value to `true` if you don't want to see blinking browser. It is `background run mode` 
+   headless               = false
    ```
 5. Make sure you **saved** changes in the files.
 6. Double click to `.jar` file.
@@ -56,3 +58,31 @@ From now on you have several days or a week without this filth. In theory...
 #### Information security
 You shouldn't log in every time when program open browser window. It's because cookies are saved in the
 `browser-put-garbage-here` folder (it appears after 1st run). Dont share this folder content with third parties.
+
+## Overview
+
+
+## Issues
+#### Major
+- [ ] Using `hh.ru api` instead of UI approach with `Selenide`
+- [ ] WebUI or SwingUI at least
+- [ ] Data base
+- [ ] Add CI/CD to make releases automatically after merging into main branch or smthng and bind
+this `README.md` to original repo
+- [ ] add `process automatically anyway` button to exclude targets from
+    list of recommended to process manually (make sense after adding UI and DB)
+
+#### Current
+- [ ] Page load time isn't enough. Waits should be increased
+- [ ] Add FIRST_RUN mode so user can log in, accept cookies, set location etc. Program should just open browser
+  in this mode.
+- [ ] add to report start/end time and speed (targets per minute)
+- [x] remove seconds and milliseconds from report
+- [x] separate user properties from application ones
+- [x] Program doesn't work after run with property `headless=true` without killing chrome.exe processes
+- [x] if text analyzer found matches in vacancy description add text demo to report
+- [x] `find test tasks` mode
+- [x] use javascript in `setVal()` method via setting property `fastSetValue` to `true`
+  (is it faster? check it).  
+  Upd. Yep, its magical...
+
