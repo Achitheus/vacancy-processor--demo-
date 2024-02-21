@@ -73,8 +73,12 @@ in the [Execute](#execute) section and by reading the report example below.
 Program also analyze target descriptions via `regular expressions` for imperative mood sequences and key phrases
 to make sure that the target can be processed automatically and human intervention isn't required.
 #### Executing demo
-Demonstration of the program in `analyze vacancy descriptions` mode:
-![processorDemo.gif](markdown-resources/processorDemo.gif)
+Demonstration of the program in `vacancy responsing` mode:
+
+---
+![processorDemo.gif](markdown-resources/responsing.gif)
+
+---
 #### Report example
 ```text
  >>>>>>   NEW RUN   <<<<<<  >>>>>>   NEW RUN   <<<<<<  >>>>>>   NEW RUN   <<<<<<  >>>>>>   NEW RUN   <<<<<<  >>>>>>   NEW RUN   <<<<<<
