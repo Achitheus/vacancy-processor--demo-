@@ -1,5 +1,5 @@
 # Vacancy processor (demo)
-Automated processing vacancies programm
+The program for automated vacancies applying and analyzing vacancies descriptions.
 
 - [Execute](#execute)
 - [Notes](#notes)
@@ -16,13 +16,13 @@ Automated processing vacancies programm
    - `coverLetter.txt`
    - `userProperties.properties`  
    Properties file content example:
-   ```properties
+   ``` properties
    # Available modes:
    #   - first_run (or "FR"/"fr"),
    #   - analyze_vacancy_descriptions (or "AVD"/"avd"),
    #   - vacancies_applying (or "VA"/"va"),
    #   - find_test_tasks (or "FTT"/"ftt")
-   process.mode           = avd
+   process.mode           = fr
    vacancy.count          = 1
    query                  = QA automation
    # Exact resume title isn't necessary for this value. Target resume title should contain it as substring.
@@ -31,29 +31,29 @@ Automated processing vacancies programm
    # Switch this value to `true` if you don't want to see blinking browser. It is `background run mode` 
    headless               = false
    ```
-5. Make sure you **saved** changes in the files.
-6. Double click to `.jar` file.
+6. Make sure you **saved** changes in the files.
+7. Double click to `.jar` file.
 ## Notes
 #### First run
-In `FIRST_RUN` mode program just opens browser window.
-To enable it set property `process.mode = fr`.  
+In `FIRST_RUN` mode the program just opens browser window.
 Use this mode to log in, accept cookies, set location, etc.
 Next run will take into account these settings.
 This mode is also set `headless` property to `false` forcibly.
-It's also recommended to change default chrome profile color to noticeable one because...
+To enable this mode set `process.mode = fr` in the `userProperties.properties` file.  
+
 #### Another way to run program
 You also can run program via command line:
 1. Open explorer and go to `.jar` containing folder.
 2. Click to folder path field then print `cmd` and press `enter`.
 3. Run command `java -jar program-name.jar`
 
-If you met command line cyrillic encoding issue do following steps:
+If you met command line cyrillic encoding issue do the following steps:
 1. Start -> Run -> regedit
 2. Go to [HKEY_LOCAL_MACHINE \ Software \ Microsoft \ Command Processor\Autorun]
-3. Change the value to `@chcp 65001>nul`
+3. Change the value to `@chcp 65001>nul`.
 If `Autorun` isn't present, you can add a `New String`.
 #### Program throws error while there is opened browser window from previous session (actual for `headless = false` runs)
-- Before running make sure that browser window opened by program last time is closed.
+- Before running make sure that browser window opened by the program last time is closed.
 #### Captcha
 If you met the captcha issue do the following:
 - Run the program with property `headless = false` and wait for captcha appearing
@@ -167,7 +167,7 @@ VacancyInfo{
 - [ ] WebUI or SwingUI at least
 - [ ] Data base
 - [ ] Add CI/CD to make releases automatically after merging into main branch or smthng and bind
-this `README.md` to original repo
+this `README.md` to original repo somehow
 - [ ] add `process automatically anyway` button to exclude targets from
     list of recommended to process manually (make sense after adding UI and DB)
 
